@@ -1,0 +1,19 @@
+# Ignore data files
+data/
+*.pdf
+*.json
+
+# Ignore Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Ignore logs and environment stuff
+*.log
+.env
+venv/
+.idea/
+.DS_Store
+
+# Ignore notebooks (if not needed)
+*.ipynb
