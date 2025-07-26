@@ -1,0 +1,4 @@
+PyPDF2==3.0.1
+sentence-transformers==2.7.0
+torch # sentence-transformers depends on torch
+# Add any other libraries you find you need later
