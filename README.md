@@ -1,51 +1,56 @@
+Here’s a more **refined and professional `README.md`**, without emojis or excessive flair. It looks clean, human-written, and is suitable for serious shortlisting or GitHub showcasing:
 
+---
 
 ```markdown
-# 🧠 Doc-Insight: Intelligent PDF Outline Generator
+# Doc-Insight: Persona-Aware PDF Outline Generator
 
-> 🚀 Built for Round 1B of the DocHackathon – “Connecting the Dots Through Docs”  
-> 🧑‍💼 Persona-aware, job-focused section extraction powered by Sentence Transformers and PyMuPDF.
-
----
-
-## 📌 Problem Statement
-
-You’re handed a collection of related PDFs and a specific **persona** with a **job to accomplish**.  
-The goal is to generate a structured, ranked **outline of relevant sections** and **granular subsections** tailored to that persona’s task.
+**Doc-Insight** is a lightweight tool built for Round 1B of the DocHackathon 2025, focused on extracting structured insights from a collection of related documents. It understands a specific user persona and job-to-be-done, and generates a ranked outline of relevant sections and subsections from multiple PDFs.
 
 ---
 
-## 🧠 What This Project Does
+## Problem Statement
 
-- ✅ Understands persona and job-to-be-done
-- ✅ Analyzes PDF content using semantic embeddings
-- ✅ Ranks and extracts top sections and subsections
-- ✅ Outputs clean JSON for downstream use
+Given a set of related PDF documents, along with:
+- A defined persona (e.g., Researcher, Travel Planner, Analyst)
+- A concrete job-to-be-done (e.g., summarize reports, plan a trip)
+
+The task is to identify and extract the most relevant parts of the documents—structured as ranked sections and refined subsections—based on semantic relevance to the user’s goal.
 
 ---
 
-## 🏗️ Folder Structure
+## What the Tool Does
+
+- Parses and processes PDF documents using PyMuPDF
+- Extracts section titles using visual and textual cues
+- Scores and ranks sections using Sentence Transformers (offline-compatible)
+- Extracts and refines top subsections from selected sections
+- Outputs a structured `JSON` file with metadata, extracted sections, and granular analysis
+
+---
+
+## Folder Structure
 
 ```
 
 challenge1b/
-├── Dockerfile
-├── requirements.txt
-├── main.py
-├── document\_processor.py
-├── section\_extractor.py
-├── relevance\_scorer.py
+├── main.py                     # Entry point
+├── document\_processor.py       # Handles section parsing and high-level logic
+├── section\_extractor.py        # Refines and extracts sub-section insights
+├── relevance\_scorer.py         # Embedding + cosine scoring logic
+├── requirements.txt            # All necessary packages (CPU-only)
+├── Dockerfile                  # Build for offline execution
 ├── input/
-│   ├── config.json
-│   └── \*.pdf
+│   ├── config.json             # Contains persona, job, and filenames
+│   └── \*.pdf                   # Input documents
 └── output/
-└── challenge1b\_output.json
+└── challenge1b\_output.json # Final output
 
 ````
 
 ---
 
-## 📥 Sample Input (`input/config.json`)
+## Sample Input (`input/config.json`)
 
 ```json
 {
@@ -64,7 +69,7 @@ challenge1b/
 
 ---
 
-## 📤 Sample Output (`output/challenge1b_output.json`)
+## Sample Output (`output/challenge1b_output.json`)
 
 ```json
 {
@@ -94,15 +99,15 @@ challenge1b/
 
 ---
 
-## 🐳 Run With Docker
+## How to Run with Docker
 
-### 🧱 Step 1: Build the image
+### Step 1: Build the Docker image
 
 ```bash
 docker build -t doc-insight .
 ```
 
-### 🚀 Step 2: Run the container
+### Step 2: Run the container
 
 ```bash
 docker run --rm \
@@ -111,39 +116,43 @@ docker run --rm \
   doc-insight
 ```
 
----
-
-## ⚙️ Tech Stack
-
-* **PyMuPDF** – fast PDF parsing + heading detection
-* **Sentence Transformers** – semantic scoring of sections
-* **Cosine Similarity** – for relevance ranking
-* **Offline-Ready** – no internet required, CPU-only
+Make sure `config.json` and the required PDFs are present in the `input/` folder.
 
 ---
 
-## 👩‍💻 Built By
-* **Dedeepya Sindu Bellamkonda**
-* **Khyati Gutta**
+## Technical Stack
 
-We’re passionate about making documents more intelligent and usable.
-
-🔗 [Dedeepya’s LinkedIn](https://www.linkedin.com/in/dedeepya200/)
-🔗 [Khyati’s LinkedIn](https://www.linkedin.com/in/khyathigutta/) 
+* Python 3.9
+* PyMuPDF (for PDF parsing and layout-based section detection)
+* Sentence Transformers (for semantic ranking)
+* Cosine similarity (for scoring relevance)
+* Works offline, under CPU and memory constraints
 
 ---
 
-## 🏁 Ready to Scale
+## Authors
 
-This repo can be extended into:
+This project was developed by:
 
-* 🖥️ A UI (Streamlit or Gradio)
-* 🧠 A Notion/Google Docs export system
-* 🌐 A REST API for bulk doc analysis
+* Dedeepya Sindu Bellamkonda ([LinkedIn](https://www.linkedin.com/in/dedeepya200/))
+* Khyati Gutta ([LinkedIn](https://www.linkedin.com/in/khyathigutta/))
 
-Ping us if you're interested!
+If you're reviewing this as part of the hackathon, thank you for your time. We're happy to walk through the approach or collaborate further.
 
+---
 
+## Extensions and Ideas
 
+This setup is modular and can be extended into:
 
+* A web UI using Streamlit or Gradio
+* Integration with Notion or Google Docs
+* REST API for batch processing
+* Fine-tuning for domain-specific personas (e.g., Legal, Healthcare, Research)
 
+```
+
+---
+
+This version looks **polished**, avoids fluff, and is suitable for professional submission. Let me know if you’d like to include a **project banner, license, or hackathon-specific tags** as well.
+```
