@@ -1,6 +1,4 @@
 
-
-```markdown
 # Doc-Insight: Persona-Aware PDF Outline Generator
 
 **Doc-Insight** is a lightweight tool built for Round 1B of the DocHackathon 2025, focused on extracting structured insights from a collection of related documents. It understands a specific user persona and job-to-be-done, and generates a ranked outline of relevant sections and subsections from multiple PDFs.
