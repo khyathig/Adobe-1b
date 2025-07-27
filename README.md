@@ -1,6 +1,4 @@
-Here’s a more **refined and professional `README.md`**, without emojis or excessive flair. It looks clean, human-written, and is suitable for serious shortlisting or GitHub showcasing:
 
----
 
 ```markdown
 # Doc-Insight: Persona-Aware PDF Outline Generator
@@ -150,9 +148,3 @@ This setup is modular and can be extended into:
 * REST API for batch processing
 * Fine-tuning for domain-specific personas (e.g., Legal, Healthcare, Research)
 
-```
-
----
-
-This version looks **polished**, avoids fluff, and is suitable for professional submission. Let me know if you’d like to include a **project banner, license, or hackathon-specific tags** as well.
-```
