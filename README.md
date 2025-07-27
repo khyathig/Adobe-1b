@@ -44,11 +44,11 @@ The task is to identify and extract the most relevant parts of the documents—s
 │   └── *.pdf
 └── output/
     └── challenge1b_output.json
----
 
+---
 ## Sample Input (`input/config.json`)
 
-```json
+
 {
   "persona": {
     "role": "Travel Planner"
@@ -61,13 +61,13 @@ The task is to identify and extract the most relevant parts of the documents—s
     { "filename": "South of France - Cities.pdf" }
   ]
 }
-````
+
 
 ---
 
 ## Sample Output (`output/challenge1b_output.json`)
 
-```json
+
 {
   "metadata": {
     "input_documents": [...],
@@ -91,7 +91,6 @@ The task is to identify and extract the most relevant parts of the documents—s
     }
   ]
 }
-```
 
 ---
 
