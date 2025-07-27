@@ -45,7 +45,7 @@ The task is to identify and extract the most relevant parts of the documents—s
 │   ├── config.json
 │   └── \*.pdf
 └── output/
-└── challenge1b\_output.json
+    └── challenge1b\_output.json
 
 ````
 
