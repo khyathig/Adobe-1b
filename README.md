@@ -27,12 +27,14 @@ The task is to identify and extract the most relevant parts of the documents—s
 
 ## Folder Structure
 
+```
+
 .
 ├── src/
 │   ├── main.py
-│   ├── output_generator.py
-│   ├── pdf_processor.py
-│   └── relevance_scorer.py
+│   ├── output\_generator.py
+│   ├── pdf\_processor.py
+│   └── relevance\_scorer.py
 ├── config.py
 ├── .dockerignore
 ├── .gitignore
@@ -41,14 +43,16 @@ The task is to identify and extract the most relevant parts of the documents—s
 ├── requirements.txt
 ├── input/
 │   ├── config.json
-│   └── *.pdf
+│   └── \*.pdf
 └── output/
-    └── challenge1b_output.json
+└── challenge1b\_output.json
+
+````
 
 ---
 ## Sample Input (`input/config.json`)
 
-
+```json
 {
   "persona": {
     "role": "Travel Planner"
@@ -61,16 +65,16 @@ The task is to identify and extract the most relevant parts of the documents—s
     { "filename": "South of France - Cities.pdf" }
   ]
 }
+````
 
-
----
+-----
 
 ## Sample Output (`output/challenge1b_output.json`)
 
-
+```json
 {
   "metadata": {
-    "input_documents": [...],
+    "input_documents": [],
     "persona": "Travel Planner",
     "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends.",
     "processing_timestamp": "2025-07-26T18:52:33.456Z"
@@ -91,8 +95,9 @@ The task is to identify and extract the most relevant parts of the documents—s
     }
   ]
 }
+```
 
----
+-----
 
 ## How to Run with Docker
 
@@ -113,35 +118,34 @@ docker run --rm \
 
 Make sure `config.json` and the required PDFs are present in the `input/` folder.
 
----
+-----
 
 ## Technical Stack
 
-* Python 3.9
-* PyMuPDF (for PDF parsing and layout-based section detection)
-* Sentence Transformers (for semantic ranking)
-* Cosine similarity (for scoring relevance)
-* Works offline, under CPU and memory constraints
+  * Python 3.9
+  * PyMuPDF (for PDF parsing and layout-based section detection)
+  * Sentence Transformers (for semantic ranking)
+  * Cosine similarity (for scoring relevance)
+  * Works offline, under CPU and memory constraints
 
----
+-----
 
 ## Authors
 
 This project was developed by:
 
-* Dedeepya Sindu Bellamkonda ([LinkedIn](https://www.linkedin.com/in/dedeepya200/))
-* Khyati Gutta ([LinkedIn](https://www.linkedin.com/in/khyathigutta/))
+  * Dedeepya Sindu Bellamkonda ([LinkedIn](https://www.linkedin.com/in/dedeepya200/))
+  * Khyati Gutta ([LinkedIn](https://www.linkedin.com/in/khyathigutta/))
 
 If you're reviewing this as part of the hackathon, thank you for your time. We're happy to walk through the approach or collaborate further.
 
----
+-----
 
 ## Extensions and Ideas
 
 This setup is modular and can be extended into:
 
-* A web UI using Streamlit or Gradio
-* Integration with Notion or Google Docs
-* REST API for batch processing
-* Fine-tuning for domain-specific personas (e.g., Legal, Healthcare, Research)
-
+  * A web UI using Streamlit or Gradio
+  * Integration with Notion or Google Docs
+  * REST API for batch processing
+  * Fine-tuning for domain-specific personas (e.g., Legal, Healthcare, Research)
