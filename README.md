@@ -29,22 +29,22 @@ The task is to identify and extract the most relevant parts of the documents—s
 
 ## Folder Structure
 
+
+```
+challenge1b/
+├── Dockerfile
+├── requirements.txt
+├── main.py
+├── document_processor.py
+├── section_extractor.py
+├── relevance_scorer.py
+├── input/
+│   ├── config.json
+│   └── *.pdf
+└── output/
+    └── challenge1b_output.json
 ```
 
-challenge1b/
-├── main.py                     # Entry point
-├── document\_processor.py       # Handles section parsing and high-level logic
-├── section\_extractor.py        # Refines and extracts sub-section insights
-├── relevance\_scorer.py         # Embedding + cosine scoring logic
-├── requirements.txt            # All necessary packages (CPU-only)
-├── Dockerfile                  # Build for offline execution
-├── input/
-│   ├── config.json             # Contains persona, job, and filenames
-│   └── \*.pdf                   # Input documents
-└── output/
-└── challenge1b\_output.json # Final output
-
-````
 
 ---
 
