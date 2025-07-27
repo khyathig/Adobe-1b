@@ -31,5 +31,3 @@ The intelligence of our system lies in the `relevance_scorer` module. This modul
 ### **4. Output Generation**
 
 The final module, `output_generator`, takes the sorted list of relevant chunks and formats it into the required `output.json` file. It constructs the `metadata`, `extracted_sections`, and `subsection_analysis` fields, populating them with the top-ranked results and adding an `importance_rank` to each entry. This ensures our output is well-structured and directly usable.
-
-[cite_start]The final module, `output_generator`, takes the sorted list of relevant chunks and formats it into the required `output.json` file[cite: 38]. It constructs the `metadata`, `extracted_sections`, and `subsection_analysis` fields, populating them with the top-ranked results and adding an `importance_rank` to each entry. This ensures our output is well-structured and directly usable.
