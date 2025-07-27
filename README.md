@@ -1,6 +1,4 @@
-Sure! Below is the exact `README.md` content written in **proper GitHub-flavored Markdown syntax** — just copy and paste this into a file named `README.md` in your repo and GitHub will render it perfectly 🎯
 
----
 
 ```markdown
 # 🧠 Doc-Insight: Intelligent PDF Outline Generator
