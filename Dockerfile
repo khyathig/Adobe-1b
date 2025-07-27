@@ -7,15 +7,11 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code and config
+# Copy all source code from the src directory
 COPY src/ /app/src/
-COPY config.py /app/
-
-# Copy data directory (ensure input files are in data/input/)
-COPY data/ /app/data/
 
 # Set PYTHONPATH for module resolution
 ENV PYTHONPATH=/app
 
 # Run the main pipeline script
-CMD ["python", "src/main.py", "data/input", "data/output"]
+CMD ["python", "src/main.py", "input", "output"]
